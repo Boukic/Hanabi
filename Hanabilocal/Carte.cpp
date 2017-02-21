@@ -9,7 +9,7 @@
 #include <iostream>
 using namespace std;
 
-Carte::Carte(couleur color,short numero){
+Carte::Carte(Couleur color,short numero){
 	this->color = color;
 	this->numero=numero;
 

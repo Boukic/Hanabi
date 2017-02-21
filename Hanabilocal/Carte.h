@@ -7,24 +7,22 @@
 
 #ifndef CARTE_H_
 #define CARTE_H_
+#include "Couleur.h"
 
-static enum couleur{
-	rouge,jaune,blanc,vert
-};
 
 class Carte{
 
 private :
 
 	short numero;
-	couleur color;
+	Couleur color;
 
 public:
-	couleur getColor() const {
+	Couleur getColor() const {
 		return color;
 	}
 
-	void setColor(couleur color) {
+	void setColor(Couleur color) {
 		this->color = color;
 	}
 
@@ -36,7 +34,7 @@ public:
 		this->numero = numero;
 	}
 
-	Carte(couleur color,short numero);
+	Carte(Couleur color,short numero);
 	virtual ~Carte();
 	void affiche();
 
