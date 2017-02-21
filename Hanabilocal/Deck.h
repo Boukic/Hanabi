@@ -21,6 +21,7 @@ public :
 	~Deck();
 	void shuffle();
 	Carte pioche();
+	int taille();
 
 
 };
