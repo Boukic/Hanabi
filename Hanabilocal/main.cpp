@@ -1,13 +1,14 @@
 /*
  * main.cpp
  *
- *  Created on: 21 févr. 2017
+ *  Created on: 21 fï¿½vr. 2017
  *      Author: louis
  */
 
 #include <iostream>
 #include "Couleur.h"
 #include "Carte.h"
+#include "Deck.h"
 
 using namespace std;
 
@@ -18,7 +19,8 @@ int main() {
 	Carte c1(rouge, 5);
 	Carte c2(bleu, 5);
 
-	c2.affiche();
+	Deck deck = Deck();
+	deck.affiche();
 
 	return 0;
 }
