@@ -8,16 +8,29 @@
 #ifndef PLATEAU_H_
 #define PLATEAU_H_
 #include <list>
+#include <stack>
+#include <vector>
+#include "Deck.h"
+
 using namespace std;
 
 class Plateau{
 private :
+	stack<Carte> jaunes;
+	stack<Carte> rouges;
+	stack<Carte> verts;
+	stack<Carte> blanc;
+	stack<Carte> bleu;
 	Deck paquet;
-	list<Carte> plateau;
+
 
 public :
-	void poser();
-	void piocher();
+	void poser(Carte c);
+	Carte piocher();
+	Plateau();
+	~Plateau();
+	void affiche();
+	vector<Carte> distribution();
 };
 
 

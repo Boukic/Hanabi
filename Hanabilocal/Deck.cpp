@@ -8,6 +8,8 @@
 using namespace std;
 #include <iostream>
 #include "Deck.h"
+#include <cstdlib>
+#include <ctime>
 
 Deck::Deck(){
 
@@ -20,7 +22,7 @@ Deck::Deck(){
 	colors.push_back(Couleur("blanc"));
 	list<Couleur>::iterator it;
 
-	for (int i=1;i<5;i++){
+	for (int i=1;i<=5;i++){
 		if (i==1){
 			for (int j=0;j<3;j++){
 					for(it=colors.begin();it!=colors.end();it++){
@@ -50,12 +52,24 @@ Deck::~Deck(){
 }
 
 void Deck::affiche(){
-	list<Carte>::iterator it;
+	vector<Carte>::iterator it;
 	for (it = paquet.begin();it!=paquet.end();it++){
 		it->affiche();
 	}
 }
 void Deck::shuffle(){
+	srand((unsigned)time(0));
+	Carte buffer1,buffer2;
+	int random1;
+	int random2;
+	for(int i =0 ; i< 100000 ; i++){
+		random1 = rand()%this->taille();
+		random2 = rand()%this->taille();
+		buffer1 = paquet[random1];
+		paquet[random1]=paquet[random2];
+		paquet[random2]=buffer1;
+	}
+
 
 }
 

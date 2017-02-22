@@ -7,6 +7,7 @@
 
 #include "Carte.h"
 #include <list>
+#include <vector>
 using namespace std;
 
 #ifndef DECK_H_
@@ -14,7 +15,7 @@ using namespace std;
 
 class Deck{
 private:
-	list<Carte> paquet;
+	vector<Carte> paquet;
 
 public :
 	Deck();
@@ -22,6 +23,7 @@ public :
 	void shuffle();
 	Carte pioche();
 	int taille();
+	void affiche();
 
 
 };

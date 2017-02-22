@@ -33,6 +33,7 @@ public:
 		this->numero = numero;
 	}
 
+	Carte();
 	Carte(Couleur color,short numero);
 	virtual ~Carte();
 	void affiche();
