@@ -57,6 +57,13 @@ void Deck::affiche(){
 		it->affiche();
 	}
 }
+
+Carte Deck::pioche(){
+	Carte buffer = paquet[paquet.size()-1];
+	paquet.pop_back();
+	return buffer;
+}
+
 void Deck::shuffle(){
 	srand((unsigned)time(0));
 	Carte buffer1,buffer2;
