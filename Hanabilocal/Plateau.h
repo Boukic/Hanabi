@@ -19,8 +19,8 @@ private :
 	stack<Carte> jaunes;
 	stack<Carte> rouges;
 	stack<Carte> verts;
-	stack<Carte> blanc;
-	stack<Carte> bleu;
+	stack<Carte> blancs;
+	stack<Carte> bleus;
 	Deck paquet;
 
 
@@ -31,6 +31,8 @@ public :
 	~Plateau();
 	void affiche();
 	vector<Carte> distribution();
+	bool poser();
+	int calculpoint();
 };
 
 
