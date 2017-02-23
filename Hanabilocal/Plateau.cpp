@@ -86,6 +86,7 @@ vector<Carte> Plateau::distribution(){
 	for(int i=0;i<4;i++){
 		main.push_back(paquet.pioche());
 	}
+	return main;
 }
 
 Plateau::~Plateau(){
