@@ -45,6 +45,7 @@ Deck::Deck(){
 					}
 			}
 	}
+	this->shuffle();
 }
 
 Deck::~Deck(){
