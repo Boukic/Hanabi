@@ -25,13 +25,12 @@ private :
 
 
 public :
-	void poser(Carte c);
+	bool poser(Carte c);
 	Carte piocher();
 	Plateau();
 	~Plateau();
 	void affiche();
 	vector<Carte> distribution();
-	bool poser();
 	int calculpoint();
 };
 
