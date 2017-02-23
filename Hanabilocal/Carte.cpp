@@ -20,7 +20,7 @@ Carte::Carte(Couleur color,short numero){
 }
 
 void Carte::affiche(){
-	cout <<"Carte valeur : "<<this->numero<<", Couleur : "<<this->color.getColor()<<endl;
+	cout <<"Carte valeur : "<<this->numero<<", Couleur : "<<this->color.getString()<<endl;
 }
 
 Carte::~Carte(){

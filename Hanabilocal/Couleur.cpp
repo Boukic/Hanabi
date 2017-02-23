@@ -27,12 +27,12 @@ void Couleur::affiche(){
 }
 
 bool Couleur::operator ==(const Couleur& color2){
-	if(this->getColor().compare(color2.getColor())){
+	if(this->getString().compare(color2.getString())){
 		return false;
 	}
 	return true;
 }
 
 Couleur::~Couleur(){
-//	cout<<"La couleur a bien été détruite."<<endl;
+//	cout<<"La couleur a bien ï¿½tï¿½ dï¿½truite."<<endl;
 }

@@ -20,7 +20,7 @@ public :
 	void affiche();
 	bool operator==(const Couleur& color2);
 
-	const string& getColor() const {
+	const string& getString() const {
 		return color;
 	}
 
