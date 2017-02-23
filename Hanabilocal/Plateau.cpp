@@ -2,6 +2,15 @@
 #include <iostream>
 using namespace std;
 
+Plateau::Plateau(){
+	jaunes.push(Carte(Couleur("jaune"),0));
+	bleus.push(Carte(Couleur("bleu"),0));
+	blancs.push(Carte(Couleur("blanc"),0));
+	verts.push(Carte(Couleur("vert"),0));
+	rouges.push(Carte(Couleur("rouge"),0));
+	paquet = Deck();
+}
+
 bool Plateau::poser(Carte c ){
 
 	int couleur = 0;
@@ -64,7 +73,22 @@ void Plateau::affiche(){
 	verts.top().affiche();
 	blancs.top().affiche();
 	cout << "affichage du deck : " << endl;
-	paquet.affiche();
+//	paquet.affiche();
 
+}
+
+Carte Plateau::piocher(){
+	return paquet.pioche();
+}
+
+vector<Carte> Plateau::distribution(){
+	vector<Carte> main;
+	for(int i=0;i<4;i++){
+		main.push_back(paquet.pioche());
+	}
+}
+
+Plateau::~Plateau(){
+	cout << "Destruction du Plateau" << endl;
 }
 
