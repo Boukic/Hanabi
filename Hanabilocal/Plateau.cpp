@@ -5,11 +5,11 @@ using namespace std;
 bool Plateau::poser(Carte c ){
 
 	int couleur = 0;
-	if (c.getColor().getColor()=="bleu") couleur = 1;
-	if (c.getColor().getColor()=="jaune") couleur = 2;
-	if (c.getColor().getColor()=="vert") couleur = 3;
-	if (c.getColor().getColor()=="rouge") couleur = 4;
-	if (c.getColor().getColor()=="blanc") couleur = 5;
+	if (c.getColor().getString().compare("bleu")) couleur = 1;
+	if (c.getColor().getString().compare("jaune")) couleur = 2;
+	if (c.getColor().getString().compare("vert"))couleur = 3;
+	if (c.getColor().getString().compare("rouge")) couleur = 4;
+	if (c.getColor().getString().compare("blanc")) couleur = 5;
 
 	switch (couleur){
 	case 1 :
