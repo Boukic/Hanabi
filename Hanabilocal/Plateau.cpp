@@ -93,3 +93,16 @@ Plateau::~Plateau(){
 	cout << "Destruction du Plateau" << endl;
 }
 
+void Plateau::affichedefausse(){
+	cout << "alffichage de la defausse " << endl;
+	vector<Carte>::iterator it;
+	for (it = defausse.begin();it!=defausse.end();it++){
+		it->affiche();
+	}
+}
+
+	void Plateau::defausser(Carte c){
+		defausse.push_back(c);
+	}
+
+

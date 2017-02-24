@@ -10,25 +10,20 @@
 #include "Carte.h"
 #include "Deck.h"
 #include "Joueur.h"
+#include "Plateau.h"
 
 using namespace std;
 
 int main() {
-	Couleur rouge("rouge");
-	Couleur bleu("bleu");
-
-	Carte c1(rouge, 5);
-	Carte c2(bleu, 5);
-//
+	Plateau nouveauplateau = Plateau();
+	vector<Carte> main = nouveauplateau.distribution();
+	vector<Carte>::iterator it;
+	for (it = main.begin();it!=main.end();it++){
+		it->affiche();
+	}
 //	Deck deck = Deck();
-//	deck.affiche();
-//	deck.shuffle();
-//	deck.affiche();
-	vector<Carte> cartes;
-	cartes.push_back(c1);
-	cartes.push_back(c2);
-	Joueur joueur = Joueur("Killian",1,false,true,cartes );
-	joueur.afficher();
-	return 0;
+//	cout << "taille du paquet" << deck.taille()<< endl;
+//	deck.pioche().affiche();
+//	cout << "taille du paquet" << deck.taille()<< endl;
 }
 

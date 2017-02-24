@@ -21,6 +21,7 @@ private :
 	stack<Carte> verts;
 	stack<Carte> blancs;
 	stack<Carte> bleus;
+	vector<Carte> defausse;
 	Deck paquet;
 
 
@@ -32,6 +33,8 @@ public :
 	void affiche();
 	vector<Carte> distribution();
 	int calculpoint();
+	void affichedefausse();
+	void defausser(Carte c);
 };
 
 
