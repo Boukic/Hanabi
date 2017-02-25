@@ -1,7 +1,7 @@
 /*
  * Joeur.h
  *
- *  Created on: 22 févr. 2017
+ *  Created on: 22 fï¿½vr. 2017
  *      Author: louis
  */
 
@@ -27,6 +27,38 @@ public:
 	Joueur(string n, int num, bool ia, bool turn, vector<Carte> m);
 	~Joueur();
 	void afficher();
+
+	bool isIsIa() const {
+		return is_ia;
+	}
+
+	bool isIsTurn() const {
+		return is_turn;
+	}
+
+	void setIsTurn(bool isTurn) {
+		is_turn = isTurn;
+	}
+
+	const vector<Carte>& getMain() const {
+		return main;
+	}
+
+	void setMain(const vector<Carte>& main) {
+		this->main = main;
+	}
+
+	const string& getNom() const {
+		return nom;
+	}
+
+	int getNumero() const {
+		return numero;
+	}
+
+	void setNumero(int numero) {
+		this->numero = numero;
+	}
 };
 
 

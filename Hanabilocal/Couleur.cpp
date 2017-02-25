@@ -18,7 +18,7 @@ Couleur::Couleur(string couleur){
 		this->color=couleur;
 	}
 	else {
-		cout << "la couleur n'est pas valide !" << endl;
+//		cout << "la couleur n'est pas valide !" << endl;
 	}
 }
 
