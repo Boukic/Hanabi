@@ -20,13 +20,13 @@ Carte::Carte(Couleur color,short numero){
 }
 
 void Carte::affiche(){
-	cout <<"Carte de valeur : "<<this->numero<<", Couleur : "<<this->color.getString()<<endl;
+	cout <<"Carte - "<<this->numero<<" "<<this->color.getString();
 }
 
 void Carte::affiche2D(){
 	cout<<"- - - -"<<endl;
 	cout<<"|  "<<this->numero<<"  |"<<endl;
-	cout<<"|     |"<<endl;
+	//cout<<"|     |"<<endl;
 	if(this->color.getString()=="vert" || this->color.getString()=="bleu" ){
 		cout<<"|"<<color.getString()<<" |"<<endl;
 	}

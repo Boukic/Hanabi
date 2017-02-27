@@ -12,7 +12,7 @@ Plateau::Plateau(){
 	this->jeu_fini=false;
 }
 
-bool Plateau::poser(Carte c ){
+void Plateau::poser(Carte c ){
 
 	int couleur = 0;
 	if (!c.getColor().getString().compare("bleu")) couleur = 1; //BLEU
@@ -27,23 +27,25 @@ bool Plateau::poser(Carte c ){
 	case 1 :
 		if (bleus.top().getNumero()+1==c.getNumero()){
 			bleus.push(c);
-			return true;
 		}
-		else
+		else{
 			JetonRouge--;
+			cerr<<"Mauvais coup ! "<<endl;
+		}
+
 		break;
 	case 2 :
 		if (jaunes.top().getNumero()+1==c.getNumero()){
 			jaunes.push(c);
-			return true;
 		}
-		else
-					JetonRouge--;
+		else{
+			JetonRouge--;
+			cerr<<"Mauvais coup ! "<<endl;
+			}
 		break;
 	case 3 :
 		if (verts.top().getNumero()+1==c.getNumero()){
 			verts.push(c);
-			return true;
 		}
 		else
 					JetonRouge--;
@@ -51,7 +53,6 @@ bool Plateau::poser(Carte c ){
 	case 4 :
 		if (rouges.top().getNumero()+1==c.getNumero()){
 			rouges.push(c);
-			return true;
 		}
 		else
 					JetonRouge--;
@@ -59,13 +60,11 @@ bool Plateau::poser(Carte c ){
 	case 5 :
 		if (blancs.top().getNumero()+1==c.getNumero()){
 			blancs.push(c);
-			return true;
 		}
 		else
 					JetonRouge--;
 		break;
 	}
-	return false;
 }
 
 int Plateau::calculpoint(){
@@ -86,7 +85,10 @@ void Plateau::affiche(){
 	verts.top().affiche();
 	blancs.top().affiche();
 	cout<<" Jeton : "<<endl;
-	cout<<"Nombre de jeton rouge : "<<JetonRouge<<endl;
+	cout<<"Nombre de jeton rouge : "<<endl;
+	for(int i=0;i<JetonRouge;i++){
+		cout<<"<R>  ";
+	}
 	cout << "affichage du deck : " << endl;
 //	paquet.affiche();
 }
@@ -100,6 +102,10 @@ void Plateau::affiche2D(){
 	blancs.top().affiche2D();
 	cout<<" Jeton : "<<endl;
 	cout<<"Nombre de jeton rouge : "<<JetonRouge<<endl;
+	for(int i=0;i<JetonRouge;i++){
+		cout<<"<R> ";
+	}
+	cout<<endl;
 //	cout << "affichage du deck : " << endl;
 //	paquet.affiche();
 }

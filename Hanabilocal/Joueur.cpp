@@ -60,8 +60,10 @@ void Joueur::afficher(){
 	cout<<"Nom : "<<nom<<", numero : "<<numero<<endl;
 	cout<<"Affichage de la main : "<<endl;
 	vector<Carte>::iterator it;
+	int compteur=0;
 	for(it=main.begin();it!=main.end();it++){
 		it->affiche();
-
+		cout<<" ("<<compteur<<")"<<endl;
+		compteur++;
 	}
 }

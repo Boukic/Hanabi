@@ -13,6 +13,7 @@
 #include "Plateau.h"
 #include "Game.h"
 
+
 using namespace std;
 
 int main() {
@@ -31,7 +32,7 @@ int main() {
 //	newPlateau.paquet.DistribuerXCartes(&mainDeLouis,4);
 //	newPlateau.paquet.Distribuer4Cartes(&mainDeKillian);
 //	newPlateau.paquet.Distribuer4Cartes(&mainDeHamid);
-//
+
 	Joueur louis = Joueur("Louis",1,false,false,  mainDeLouis);
 	Joueur killian = Joueur("Killian",2,false,false, mainDeKillian);
 	Joueur hamid = Joueur("Hamid",3,false,false, mainDeHamid);
@@ -42,9 +43,9 @@ int main() {
 	j.push_back(killian);
 	j.push_back(hamid);
 
-
-
 	Game g = Game(j);
+
+
 
 
 

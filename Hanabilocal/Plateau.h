@@ -31,7 +31,7 @@ public :
 	Deck paquet;
 
 
-	bool poser(Carte c);
+	void poser(Carte c);
 	Carte piocher();
 	Plateau();
 	~Plateau();
